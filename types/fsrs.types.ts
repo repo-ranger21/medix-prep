@@ -31,7 +31,7 @@ export const TOPIC_CRITICALITY: Record<string, ContentCriticality> = {
 };
 
 export const XP_BASE: Record<Rating, number> = {
-  0: 0,   // Manual
+  0: 0,   // Manual (ts-fsrs internal; no XP awarded for programmatic reviews)
   1: 5,   // Again
   2: 15,  // Hard
   3: 25,  // Good
