@@ -33,13 +33,13 @@ export const EMT_DRUG_FORMULARY = {
       "Known aspirin allergy",
       "Active GI bleeding",
       "Children <16 years (Reye syndrome risk)",
-      "PDE-5 inhibitor use (sildenafil, tadalafil, vardenafil) — NOTE: PDE-5 contraindicates nitroglycerin, NOT aspirin",
       "Recent GI surgery",
     ],
     sideEffects: ["GI upset", "Bleeding"],
     notes: [
       "Patient may have already taken aspirin today — still administer unless contraindicated",
       "324mg total dose (chewed for faster absorption)",
+      "PDE-5 inhibitors (sildenafil, tadalafil, vardenafil) contraindicate nitroglycerin — NOT aspirin",
     ],
   } satisfies DrugFormularyEntry,
 

@@ -57,6 +57,7 @@ export function scheduleReview(
   const f = getFsrsForTopic(topicCategory);
   const now = reviewDate ?? new Date();
   const recordLog: RecordLog = f.repeat(card, now);
+  // Rating.Manual (0) is excluded from RecordLog — callers must only pass Grade values (Again/Hard/Good/Easy)
   const result = recordLog[rating as Grade];
   return {
     updatedCard: result.card,

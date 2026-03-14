@@ -1,12 +1,11 @@
-import { CPR_PARAMS, CHAIN_OF_SURVIVAL, POST_ROSC_TARGETS, HS_AND_TS, SHOCKABLE_RHYTHMS, CPR_QUALITY_ELEMENTS, HEAD_UP_CPR_2025, INFANT_TWO_FINGER_ELIMINATED_2025 } from "./cardiac-arrest";
-import { EMT_DRUG_FORMULARY } from "./drug-formulary";
+import { CPR_PARAMS, CHAIN_OF_SURVIVAL, POST_ROSC_TARGETS, HS_AND_TS, SHOCKABLE_RHYTHMS, CPR_QUALITY_ELEMENTS, HEAD_UP_CPR_2025, INFANT_TWO_FINGER_ELIMINATED_2025 } from "./cardiac-arrest";import { EMT_DRUG_FORMULARY } from "./drug-formulary";
 import { AED_STEPS, AED_PAD_PLACEMENT, AED_BRA_GUIDANCE_2025, PEDIATRIC_AED_2025_UPDATE } from "./aed";
 import { ADULT_CHILD_FBAO, INFANT_FBAO, FBAO_SPECIAL_POPULATIONS } from "./fbao";
 import { SCOPE_OF_PRACTICE, CERT_LEVEL_HIERARCHY, isTopicInScope, isWithinScope, ALS_KEYWORDS } from "./scope-of-practice";
 import type { ProtocolFact } from "@/types/protocol.types";
 import type { CertLevel } from "@/types/database.types";
 
-export { CPR_PARAMS, CHAIN_OF_SURVIVAL, POST_ROSC_TARGETS, HEAD_UP_CPR_2025, INFANT_TWO_FINGER_ELIMINATED_2025 };
+export { CPR_PARAMS, CHAIN_OF_SURVIVAL, POST_ROSC_TARGETS, HEAD_UP_CPR_2025, INFANT_TWO_FINGER_ELIMINATED_2025, HS_AND_TS, SHOCKABLE_RHYTHMS, CPR_QUALITY_ELEMENTS };
 export { EMT_DRUG_FORMULARY };
 export { AED_STEPS, AED_PAD_PLACEMENT, AED_BRA_GUIDANCE_2025, PEDIATRIC_AED_2025_UPDATE };
 export { ADULT_CHILD_FBAO, INFANT_FBAO, FBAO_SPECIAL_POPULATIONS };
@@ -172,8 +171,3 @@ export function extractRelevantFacts(query: string): ProtocolFact[] {
 
   return facts;
 }
-
-// Suppress unused variable warnings for re-exported items used indirectly
-void HS_AND_TS;
-void SHOCKABLE_RHYTHMS;
-void CPR_QUALITY_ELEMENTS;
