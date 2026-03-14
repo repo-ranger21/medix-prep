@@ -112,9 +112,7 @@ export const useStudyStore = create<StudyState>((set, get) => ({
     const currentCard = queue[currentIndex];
     if (!currentCard) return { xpEarned: 0 };
 
-    const responseTimeMs = answerTimestamp
-      ? Date.now() - (stats.sessionStartMs + stats.responseTimes.reduce((a, b) => a + b, 0))
-      : 30000;
+    const responseTimeMs = answerTimestamp ? Date.now() - answerTimestamp : 30000;
 
     // API call
     let xpEarned = 0;
